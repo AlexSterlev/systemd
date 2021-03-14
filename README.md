@@ -70,9 +70,9 @@ WantedBy=multi-user.target
 Запускаем таймер `systemctl start watchlog.timer` и смотрим лог `tailf /var/log/messages`:
 
 ```
-Dec  4 22:31:32 systemd systemd: Started Run watchlog service every 30 second.
-Dec  4 22:31:32 systemd systemd: Starting My watchlog service...
-Dec  4 22:31:32 systemd systemd: Started My watchlog service.
+Mar  14 12:31:32 systemd systemd: Started Run watchlog service every 30 second.
+Mar  14 12:31:32 systemd systemd: Starting My watchlog service...
+Mar  14 12:31:32 systemd systemd: Started My watchlog service.
 ```
 
 Начинаем писать строки в наш лог `/var/log/watchlog.log` , включая слово ALERT:
@@ -85,18 +85,18 @@ echo ALERT >> /var/log/watchlog.log
 Наблюдаем за логом `tailf /var/log/messages`:
 
 ```
-Dec  4 22:31:32 systemd systemd: Started Run watchlog service every 30 second.
-Dec  4 22:31:32 systemd systemd: Starting My watchlog service...
-Dec  4 22:31:32 systemd systemd: Started My watchlog service.
-Dec  4 22:32:02 systemd systemd: Starting My watchlog service...
-Dec  4 22:32:02 systemd systemd: Started My watchlog service.
-Dec  4 22:32:32 systemd systemd: Starting My watchlog service...
-Dec  4 22:32:32 systemd systemd: Started My watchlog service.
-Dec  4 22:33:03 systemd systemd: Starting My watchlog service...
-Dec  4 22:33:03 systemd systemd: Started My watchlog service.
-Dec  4 22:33:33 systemd systemd: Starting My watchlog service...
-Dec  4 22:33:33 systemd root: Wed Dec  4 22:33:33 UTC 2019: I found word, Master!
-Dec  4 22:33:33 systemd systemd: Started My watchlog service.
+Mar  14 12:31:32 systemd systemd: Started Run watchlog service every 30 second.
+Mar  14 12:31:32 systemd systemd: Starting My watchlog service...
+Mar  14 12:31:32 systemd systemd: Started My watchlog service.
+Mar  14 12:32:02 systemd systemd: Starting My watchlog service...
+Mar  14 12:32:02 systemd systemd: Started My watchlog service.
+Mar  14 12:32:32 systemd systemd: Starting My watchlog service...
+Mar  14 12:32:32 systemd systemd: Started My watchlog service.
+Mar  14 12:33:03 systemd systemd: Starting My watchlog service...
+Mar  14 12:33:03 systemd systemd: Started My watchlog service.
+Mar  14 12:33:33 systemd systemd: Starting My watchlog service...
+Mar  14 12:33:33 systemd root: Sun Mar  14 12:33:33 UTC 2021: I found word, Master!
+Mar  14 12:33:33 systemd systemd: Started My watchlog service.
 ```
 
 
@@ -143,7 +143,7 @@ WantedBy=multi-user.target
 [root@systemd ~]# systemctl status spawn-fcgi.service
 ● spawn-fcgi.service - Spawn-fcgi startup service by Otus
    Loaded: loaded (/etc/systemd/system/spawn-fcgi.service; disabled; vendor preset: disabled)
-   Active: active (running) since Ср 2019-12-04 22:46:22 UTC; 23s ago
+   Active: active (running) since Ср 2021-03-14 12:46:22 UTC; 23s ago
  Main PID: 3493 (php-cgi)
    CGroup: /system.slice/spawn-fcgi.service
            ├─3493 /usr/bin/php-cgi
@@ -180,7 +180,7 @@ WantedBy=multi-user.target
            ├─3524 /usr/bin/php-cgi
            └─3525 /usr/bin/php-cgi
 
-дек 04 22:46:22 systemd systemd[1]: Started Spawn-fcgi startup service by Otus.
+мар 14 12:46:22 systemd systemd[1]: Started Spawn-fcgi startup service by Otus.
 ```
 
 
@@ -317,7 +317,7 @@ systemctl enable --now jira.service
 [vagrant@systemd ~]$ systemctl status jira.service 
 ● jira.service - JIRA Service
    Loaded: loaded (/etc/systemd/system/jira.service; enabled; vendor preset: disabled)
-   Active: active (running) since Вс 2019-12-08 14:55:14 UTC; 23min ago
+   Active: active (running) since Вс 2021-03-14 15:55:14 UTC; 23min ago
   Process: 3205 ExecStop=/opt/atlassian/jira/current/bin/stop-jira.sh (code=exited, status=203/EXEC)
   Process: 3214 ExecStart=/opt/atlassian/jira/bin/start-jira.sh (code=exited, status=0/SUCCESS)
  Main PID: 3251 (java)
