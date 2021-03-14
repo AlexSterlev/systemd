@@ -1,0 +1,13 @@
+[Unit]
+Description=JIRA Service
+After=network.target
+
+[Service]
+Type=forking
+User=jira
+ExecStart=optatlassianjirabinstart-jira.sh
+ExecRestart=optatlassianjiracurrentbinstop-jira.sh && optatlassianjirabinstart-jira.sh
+ExecStop=optatlassianjiracurrentbinstop-jira.sh
+
+[Install]
+WantedBy=multi-user.target
