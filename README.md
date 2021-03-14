@@ -143,7 +143,7 @@ WantedBy=multi-user.target
 [root@systemd ~]# systemctl status spawn-fcgi.service
 ● spawn-fcgi.service - Spawn-fcgi startup service by Otus
    Loaded: loaded (/etc/systemd/system/spawn-fcgi.service; disabled; vendor preset: disabled)
-   Active: active (running) since Ср 2021-03-14 12:46:22 UTC; 23s ago
+   Active: active (running) since Вс 2021-03-14 12:46:22 UTC; 23s ago
  Main PID: 3493 (php-cgi)
    CGroup: /system.slice/spawn-fcgi.service
            ├─3493 /usr/bin/php-cgi
